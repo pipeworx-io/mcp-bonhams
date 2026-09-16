@@ -5,7 +5,7 @@ maker and get the hammer price, the hammer price including buyer's premium
 (the actual realized/sold price), estimate range, sale date and department;
 pull full lot detail (description, condition, images) for one lot.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1573+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1576+ live data sources.
 
 ## Tools
 
@@ -108,7 +108,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1573+ data sources. The
+Both URLs reach the same gateway and the same 1576+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 
