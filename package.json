@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-bonhams",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Bonhams MCP — realized auction prices from Bonhams.com.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-bonhams": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "bonhams"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-bonhams.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/bonhams",
   "pipeworx": {
-    "sourceHash": "v1-77818c7041f6fe4b9b337a462a6b83c8449b670def99d974d6d91abcad80068e",
-    "sourceCommit": "70a4e816a9195016cd4af92dca2019485d4c3865"
+    "mode": "gateway",
+    "slug": "bonhams",
+    "gatewaySlug": "bonhams",
+    "sourceHash": "v1-88b3e3d3de632561843ba4784cc726b4d02e92e6ee9b67ed140db5c714aaf4e2",
+    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
   }
 }

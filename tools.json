@@ -1,0 +1,55 @@
+[
+  {
+    "name": "bonhams_results_search",
+    "description": "Search Bonhams' past-lot realized-price archive by artist/maker (or any keyword). Returns sold lots with hammer price, hammer price including buyer's premium (the actual realized price), estimate range, sale date and department. Optionally filter by category (matches the department name, e.g. \"jewellery\", \"prints\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Artist, maker, or keyword, e.g. \"Picasso\", \"Rolex Daytona\"."
+        },
+        "category": {
+          "type": "string",
+          "description": "Optional free-text filter matched against the department name, e.g. \"jewellery\", \"prints\", \"books\"."
+        },
+        "page": {
+          "type": "number",
+          "description": "Result page, 1-based (each page is ~45 lots). Default 1."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max lots to return from the page (1-45, default 20)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "bonhams_lot_details",
+    "description": "Full detail for one Bonhams lot: description, condition, images, realized price (hammer + buyer's premium), estimate range, sale date. Needs the auction_id and lot_no from bonhams_results_search (slug is optional — any slug works as long as auction_id/lot_no match).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "auction_id": {
+          "type": "string",
+          "description": "Auction id, e.g. \"14786\" (from bonhams_results_search's auction_id field)."
+        },
+        "lot_no": {
+          "type": "string",
+          "description": "Lot number, e.g. \"8416\" (from bonhams_results_search's lot_no field)."
+        },
+        "slug": {
+          "type": "string",
+          "description": "Optional URL slug. Any value works; omit to use a placeholder."
+        }
+      },
+      "required": [
+        "auction_id",
+        "lot_no"
+      ]
+    }
+  }
+]
