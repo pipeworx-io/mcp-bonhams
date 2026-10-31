@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-bonhams",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Bonhams MCP — realized auction prices from Bonhams.com.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "bonhams",
     "gatewaySlug": "bonhams",
-    "sourceHash": "v1-88b3e3d3de632561843ba4784cc726b4d02e92e6ee9b67ed140db5c714aaf4e2",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-edff45abdebcabef4113c684c7a79cd60f160c376282698f6682e4e22fa83637",
+    "sourceCommit": "547a3983b42dacf4389ca474860b0a1dee8e6053"
   }
 }
